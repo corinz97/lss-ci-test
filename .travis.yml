@@ -7,5 +7,5 @@ git:
 install: true
 
 script:
- - ./gradlew check
+ - sh gradlew check
 

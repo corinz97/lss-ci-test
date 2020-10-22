@@ -10,7 +10,7 @@ plugins {
     id("io.gitlab.arturbosch.detekt") version "1.14.1"
     signing
     `maven-publish`
-    id ("org.danilopianini.publish-on-central") version "0.3.0"
+    id("org.danilopianini.publish-on-central") version "0.3.0"
 }
 
 group = "org.danilopianini"

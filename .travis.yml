@@ -4,6 +4,7 @@ git:
  depth: false
  autocrlf: input
 
+dist: focal
 
 install: true
 

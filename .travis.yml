@@ -9,3 +9,7 @@ install: true
 script:
  - sh gradlew check
 
+os:
+ - linux
+ - osx
+

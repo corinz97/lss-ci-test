@@ -30,6 +30,8 @@ env:
 stages:
  - check
  - test
+ - compile
+ - style check
 
 _reference_machine: &reference_machine
  arch: *reference_arch
@@ -48,6 +50,14 @@ jobs:
     stage: check
     script:
      - travis_retry sh gradlew check
+  - <<: *reference_machine
+    stage: compile
+    script:
+      - travis_retry sh gradlew compile --parallel
+  - <<: *reference_machine
+    stage: style check
+    script:
+      - travis_retry sh gradlew detect ktlintCheck --parallel
 
 before_install:
  - travis_retry git clone --depth 1 $GRAVIS_REPO $GRAVIS

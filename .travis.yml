@@ -53,7 +53,7 @@ jobs:
   - <<: *reference_machine
     stage: compile
     script:
-      - travis_retry sh gradlew compile --parallel
+      - travis_retry sh gradlew compileKotlin --parallel
   - <<: *reference_machine
     stage: style check
     script:

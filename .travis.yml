@@ -65,7 +65,7 @@ jobs:
     workspaces:
      use: *workspace_name
     script:
-      - travis_retry sh gradlew detect ktlintCheck --parallel
+      - travis_retry sh gradlew detekt ktlintCheck --parallel
 
 before_install:
  - travis_retry git clone --depth 1 $GRAVIS_REPO $GRAVIS

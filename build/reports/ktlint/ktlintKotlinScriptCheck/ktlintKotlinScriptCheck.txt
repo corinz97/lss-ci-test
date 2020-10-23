@@ -1,1 +1,0 @@
-[90mC:\Users\jacop\OneDrive\magistrale\2-anno\1-sem\labsistemiSW\Course-Laboratory-of-Software-Systems\code\plugin-final\[0mbuild.gradle.kts[90m:[0m13[90m:7:[0m Unexpected spacing before "("

@@ -32,7 +32,8 @@ stages:
  - style check
  - check
  - test
-
+_workspace_name: &workspace_name
+ compiled_env
 _reference_machine: &reference_machine
  arch: *reference_arch
  os: *reference_os
@@ -52,10 +53,17 @@ jobs:
      - travis_retry sh gradlew check
   - <<: *reference_machine
     stage: compile
+    workspaces:
+     create: *workspace_name
+     paths:
+      - "$TRAVIS_BUILD_DIR"
+      - "$HOME/.gradle"
     script:
       - travis_retry sh gradlew compileKotlin --parallel
   - <<: *reference_machine
     stage: style check
+    workspaces:
+     use: *workspace_name
     script:
       - travis_retry sh gradlew detect ktlintCheck --parallel
 

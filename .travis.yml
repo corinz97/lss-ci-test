@@ -28,8 +28,8 @@ env:
   - JDK="adopt-openj9@1.14"
 
 stages:
- - style check
  - compile
+ - style check
  - check
  - test
 

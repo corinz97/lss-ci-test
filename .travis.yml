@@ -28,10 +28,10 @@ env:
   - JDK="adopt-openj9@1.14"
 
 stages:
+ - style check
+ - compile
  - check
  - test
- - compile
- - style check
 
 _reference_machine: &reference_machine
  arch: *reference_arch
